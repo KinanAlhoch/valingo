@@ -1,13 +1,19 @@
+<% if user_signed_in? %>
 
-<div class="jumbotron">
-  <h1>Welcome to Valingo!</h1>
-  <p>
-  Learn a new language or practice one you already speak with real people live at <%= link_to "Valingo!","http:valingo.com" %>
-  the world's premier Language Exchange Network!
-  </p>
-  <p>
-    
-      <%= link_to "Sign Up Now!","#", class: "btn btn-primary btn-large" %>
-  
-  </p>
-</div>
+	<h1> You're logged in!</h1>
+
+<% else %>
+
+	<div class="jumbotron">
+	  <h1>Welcome to Valingo!</h1>
+	  <p>
+	  Learn a new language or practice one you already speak with real people live at <%= link_to "Valingo!","http:valingo.com" %>
+	  the world's premier Language Exchange Network!
+	  </p>
+	  <p>
+	    
+	      <%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
+	  
+	  </p>
+	</div>
+	<% end %>
